@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:fluro/fluro.dart' as route;
+import 'package:flutter/material.dart' hide Router;
 import 'package:flutter/services.dart';
 import 'package:flutterproject/config/refresh_configuration.dart';
 import 'package:flutterproject/config/routes.dart';
@@ -18,7 +18,7 @@ class AppComponent extends StatefulWidget {
 
 class AppComponentState extends State<AppComponent> {
   AppComponentState() {
-    final router = Router();
+    final router = route.Router();
     Routes.configureRoutes(router);
     Application.router = router;
   }
@@ -28,7 +28,6 @@ class AppComponentState extends State<AppComponent> {
     super.initState();
     SpUtil.getInstance();
   }
-
   @override
   Widget build(BuildContext context) {
     // 除半透明状态栏

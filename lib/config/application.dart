@@ -1,8 +1,9 @@
-import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as route;
 
 class Application {
-  static Router router;
+  static route.Router router;
   static const String TAG = "&";
   static const String QUESTION_MARK = "?";
 
